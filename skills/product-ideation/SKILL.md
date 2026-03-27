@@ -12,6 +12,8 @@ effort: high
 version: 1.0
 allowed-tools:
   - Read
+  - Write
+  - AskUser
 ---
 
 # Product Ideation Skill
