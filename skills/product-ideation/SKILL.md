@@ -106,14 +106,15 @@ Rewrite or structure the requirements using this format:
 - **Primary Persona**: (Who is this for?)
 - **Secondary Persona** (if any):
 
-## User Stories
-- As a [user], I want to [action] so that [benefit]
-- (list all key user stories)
-
 ## Functional Requirements
 - FR-01: [Requirement]
 - FR-02: [Requirement]
 - ...
+
+## User Stories
+### FR-01: [Requirement]
+- As a [user], I want to [action] so that [benefit]
+- (list all key user stories)
 
 ## Non-Functional Requirements
 - Performance: ...
@@ -150,6 +151,17 @@ When rewriting, also:
   - "Would you like me to explore any of these ideas further?"
   - "Should I draft a full PRD for this concept?"
   - "Want me to identify potential competitors or similar products?"
+- By default, prioritize generatiing the Functional Requirements and Non-Functional Requirements over user stories,
+  unless the user specifically asks for user stories format. User stories should only be generated if the user
+  explicitly requests them, otherwise focus on creating clear and actionable requirements in the PRD format.
+  - If the product has many ideas or features, at first, don't generate user stories for them. After generating the
+    requirements, ask the user if they want to see user stories for any specific requirement or feature. This way, you
+    can focus on creating clear and actionable requirements first, and then generate user stories for the most important
+    or complex requirements as needed.
+  - If the user does ask for user stories, ensure they are well-structured and directly tied to the functional
+    requirements.
+  - When generating user stories, include clear acceptance criteria for each story to ensure they are actionable and
+    testable.
 
 ---
 
