@@ -71,12 +71,12 @@ Flag any of the following immediately as **BLOCKED**:
 
 If any are present, stop and mark the review **BLOCKED** — do not approve or suggest minor changes until resolved.
 
-### 3. Removability
+### 3. Loose Coupling
 
 > "The best code is the code that can be deleted tomorrow without fear."
 
-- Can this module/function be removed without cascading failures?
-- Are all callers going through an interface, not a concrete type?
+- Can this module/function be removed or replaced without cascading failures?
+- Are all callers depending on an interface or abstraction, not a concrete type?
 - Is there global mutable state introduced that would be left behind?
 - Are side effects isolated at the edges (infrastructure layer), not embedded in business logic?
 - Are new dependencies injected, not constructed internally?
