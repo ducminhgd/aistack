@@ -1,26 +1,28 @@
 ---
 name: swe-code-review
-effort: medium
-tags:
-  - software-engineering
-  - code-review
-  - quality
-  - security
-  - clean-code
 description: >
   Use this skill when the user wants a code review, wants feedback on a diff or PR, wants to know if code is
   production-ready, or asks "is this good?", "review this", "LGTM?", "check my PR", "what's wrong with this code",
   or shares a file/snippet and asks for a critique. Also trigger when the user pastes a diff and wants a structured
   review. Produces a structured, actionable review across correctness, security, testability, removability,
   readability, performance, and consistency dimensions.
-version: 1.0
-allowed-tools:
-  - Read
-  - Glob
-  - Grep
-  - Bash
-  - TodoWrite
-  - AskUser
+metadata:
+  version: 1.0
+  effort: medium
+  tags:
+    - software-engineering
+    - code-review
+    - quality
+    - security
+    - clean-code
+  allowed-tools:
+    - Read
+    - Write
+    - Glob
+    - Grep
+    - Bash
+    - TodoWrite
+    - AskUser
 ---
 
 # Software Code Review Skill
@@ -180,6 +182,21 @@ One paragraph: what the code does, what the overall quality is, and the most imp
 - **Praise is real** — if the author did something well (good abstraction, clean error handling, well-named types),
   call it out explicitly. Honest praise is as useful as honest critique.
 - **One ask only** — if you need clarification, ask one focused question, not a list of five.
+
+---
+
+## Export
+
+After delivering the review, always ask:
+
+> *"Would you like me to export this review to a markdown file?"*
+
+- If **yes** and the user provides a filename, use that filename.
+- If **yes** and no filename is given, write the file as `CODEREVIEW_<DDMMYY-HHmm>.md`
+  (e.g. `CODEREVIEW_010426-1430.md`) in the current working directory.
+- Write the file using `references/CODEREVIEW.template.md` (located in this skill's directory) as the structure.
+  Populate every section from the review already delivered in chat.
+- If **no**, do nothing.
 
 ---
 

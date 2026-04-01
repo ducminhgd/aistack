@@ -1,13 +1,5 @@
 ---
 name: swe-implement
-effort: high
-tags:
-  - software-engineering
-  - implementation
-  - coding
-  - clean-code
-  - tdd
-  - refactoring
 description: >
   Use this skill when the user wants to implement a feature, write code for a task, translate a design or spec into
   working software, or review/improve an existing implementation. Trigger whenever the user says things like "implement
@@ -15,16 +7,25 @@ description: >
   "translate this design into code", "refactor this", or shares a task/ticket and wants it coded. Also trigger when a
   user shares a design doc, architecture decision, or user story and wants working, production-grade code from it.
   This skill produces clean, testable, removable code with full implementation guidance.
-version: 1.0
-allowed-tools:
-  - Read
-  - Write
-  - Edit
-  - Glob
-  - Grep
-  - Bash
-  - TodoWrite
-  - AskUser
+metadata:
+  version: 1.0
+  effort: high
+  tags:
+    - software-engineering
+    - implementation
+    - coding
+    - clean-code
+    - tdd
+    - refactoring
+  allowed-tools:
+    - Read
+    - Write
+    - Edit
+    - Glob
+    - Grep
+    - Bash
+    - TodoWrite
+    - AskUser
 ---
 
 # Software Implementation Skill
@@ -89,6 +90,8 @@ Test coverage target: **≥ 80% for domain + service layers**. 100% coverage of 
 - **Fail fast and loudly** — validate at system boundaries. Return typed errors, not raw strings.
 - **No premature abstraction** — three similar lines is fine; a wrong abstraction costs more than duplication.
 - **Prefer boring technology** — use the established library/pattern unless there is a specific reason not to.
+- **Readable over clever** — a clear, obvious algorithm that a new engineer can understand in 30 seconds beats a
+  micro-optimised one that requires a PhD to maintain. Optimise only when a profiler proves it is necessary.
 
 ---
 
