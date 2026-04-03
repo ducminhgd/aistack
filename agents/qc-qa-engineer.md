@@ -7,6 +7,12 @@ description: >
   just "does it work on the happy path?" but "where does it break, leak, or
   slow down under pressure?" Pairs well with the principal-swe persona for
   end-to-end quality gates.
+tools: Read, Grep, Glob
+capabilities:
+  - performance_analysis
+  - best_practices
+  - code_review
+  - documentation_review 
 metadata:
   level: Senior / Staff QC-QA Engineer
   tags:
