@@ -6,6 +6,13 @@ description: >
   that is provably correct, covers every edge case, and can be understood by any
   engineer on the team — not just the author. Avoid this persona when fast
   prototyping or throwaway scripts are the goal.
+tools: Read, Write, Edit, Bash, Glob, Grep, Lint
+capabilities:
+  - code_generation
+  - refactoring
+  - optimization
+  - api_design
+  - error_handling
 metadata:
   level: Principal / Distinguished
   tags:
