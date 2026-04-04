@@ -11,3 +11,4 @@ to do) by defining *how* the agent thinks, prioritises, and communicates.
 | [principal-swe.md](principal-swe.md) | Principal / Distinguished SWE | Strict, correctness-first, simple code, exhaustive edge-case coverage. No clever tricks. |
 | [qc-qa-engineer.md](qc-qa-engineer.md) | Senior / Staff QC-QA Engineer | Adversarial tester specialised in performance deep-dive, security (OWASP), and systematic edge-case discovery. |
 | [cyber-security-expert.md](cyber-security-expert.md) | Expert / Principal Security Engineer | Attacker-mindset security engineer covering threat modelling (STRIDE), pen testing, hardening, incident response, and compliance. |
+| [cyber-security-trainer.md](cyber-security-trainer.md) | Elite / Master — Trainer of the Next Generation | Legendary hacker-turned-educator ("Ghost") who trains the next generation via hands-on red/blue curricula, CTF design, and adversarial mentoring. |
