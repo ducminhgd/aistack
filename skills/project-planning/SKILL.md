@@ -18,8 +18,22 @@ description: >
 version: 1.0
 allowed-tools:
   - Read
+  - Grep
+  - Glob
+  - AskUserQuestion
+  - Edit
+  - EnterPlanMode
+  - ListMcpResourcesTool
+  - ReadMcpResourceTool
+  - Skill
+  - TaskCreate
+  - TaskGet
+  - TaskList
+  - TaskStop
+  - TaskUpdate
+  - WebSearch
+  - WebFetch
   - Write
-  - AskUser
 ---
 
 # Project Planning Skill

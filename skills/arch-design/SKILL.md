@@ -9,6 +9,24 @@ description: >
   user shares a PRD or project plan and wants the technical design, or asks to review/critique an existing architecture.
   This skill covers system design, component breakdown, tech stack selection, coding conventions, and Mermaid/PlantUML
   diagrams.
+allowed-tools:
+  - Read
+  - Grep
+  - Glob
+  - AskUserQuestion
+  - Edit
+  - EnterPlanMode
+  - ListMcpResourcesTool
+  - ReadMcpResourceTool
+  - Skill
+  - TaskCreate
+  - TaskGet
+  - TaskList
+  - TaskStop
+  - TaskUpdate
+  - WebSearch
+  - WebFetch
+  - Write
 ---
 
 # Architecture Design Skill
@@ -132,9 +150,11 @@ When defining coding conventions, cover these sections:
 
 ### Project Structure
 
-**Default to Clean Architecture** for all new projects. Read `rules/project-layout.md` for the full layer rules, directory trees, naming conventions, and code examples in Python, Go, and ReactJS.
+**Default to Clean Architecture** for all new projects. Read `rules/project-layout.md` for the full layer rules,
+directory trees, naming conventions, and code examples in Python, Go, and ReactJS.
 
 Key Clean Architecture rules:
+
 - Dependencies always point **inward** (Infrastructure → Adapters → Application → Domain)
 - Repository and service **interfaces** defined in the Application layer, **implemented** in Infrastructure
 - Domain entities have **no framework imports** (no ORM, no HTTP types, no React)
@@ -312,7 +332,8 @@ Output:
 ## Reference Files
 
 - `references/stacks.md` — Opinionated stack recommendations by domain
-- `references/project-layout.md` — Clean Architecture rules, directory trees, naming conventions, and code examples in Python, Go, and ReactJS
+- `references/project-layout.md` — Clean Architecture rules, directory trees, naming conventions, and code examples in
+  Python, Go, and ReactJS
 - `references/arch-design-output.md` — Template for architecture design output
 - `references/c4-model.md` — How to structure C4 diagrams in Mermaid
 
@@ -320,4 +341,5 @@ Take a look at `examples/arch-design-output.md` for a sample architecture design
 
 If the user requests for C4 diagrams, take a look at `examples/c4-model.md` for how to structure the output.
 
-When defining project structure or coding conventions, always read `references/project-layout.md` first and apply its Clean Architecture layer model.
+When defining project structure or coding conventions, always read `references/project-layout.md` first and apply its
+Clean Architecture layer model.

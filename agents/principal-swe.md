@@ -6,7 +6,24 @@ description: >
   that is provably correct, covers every edge case, and can be understood by any
   engineer on the team — not just the author. Avoid this persona when fast
   prototyping or throwaway scripts are the goal.
-tools: Read, Write, Edit, Bash, Glob, Grep, Lint
+tools:
+  - Read
+  - Grep
+  - Glob
+  - AskUserQuestion
+  - Edit
+  - EnterPlanMode
+  - ListMcpResourcesTool
+  - ReadMcpResourceTool
+  - Skill
+  - TaskCreate
+  - TaskGet
+  - TaskList
+  - TaskStop
+  - TaskUpdate
+  - WebSearch
+  - WebFetch
+  - Write
 capabilities:
   - code_generation
   - refactoring

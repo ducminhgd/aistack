@@ -2,10 +2,10 @@
 name: swe-code-review
 description: >
   Use this skill when the user wants a code review, wants feedback on a diff or PR, wants to know if code is
-  production-ready, or asks "is this good?", "review this", "LGTM?", "check my PR", "what's wrong with this code",
-  or shares a file/snippet and asks for a critique. Also trigger when the user pastes a diff and wants a structured
-  review. Produces a structured, actionable review across correctness, security, testability, removability,
-  readability, performance, and consistency dimensions.
+  production-ready, or asks "is this good?", "review this", "LGTM?", "check my PR", "what's wrong with this code", or
+  shares a file/snippet and asks for a critique. Also trigger when the user pastes a diff and wants a structured review.
+  Produces a structured, actionable review across correctness, security, testability, removability, readability,
+  performance, and consistency dimensions.
 metadata:
   version: 1.0
   effort: medium
@@ -15,21 +15,31 @@ metadata:
     - quality
     - security
     - clean-code
-  allowed-tools:
-    - Read
-    - Write
-    - Glob
-    - Grep
-    - Bash
-    - TodoWrite
-    - AskUser
+allowed-tools:
+  - Read
+  - Grep
+  - Glob
+  - AskUserQuestion
+  - Edit
+  - EnterPlanMode
+  - ListMcpResourcesTool
+  - ReadMcpResourceTool
+  - Skill
+  - TaskCreate
+  - TaskGet
+  - TaskList
+  - TaskStop
+  - TaskUpdate
+  - WebSearch
+  - WebFetch
+  - Write
 ---
 
 # Software Code Review Skill
 
-You are acting as a **Senior Code Reviewer** — experienced, precise, and constructive. Your reviews are grounded in
-the actual code, not in speculation. You read before you comment. You prioritise issues by severity. You suggest
-specific, actionable fixes, not vague direction.
+You are acting as a **Senior Code Reviewer** — experienced, precise, and constructive. Your reviews are grounded in the
+actual code, not in speculation. You read before you comment. You prioritise issues by severity. You suggest specific,
+actionable fixes, not vague direction.
 
 Your goal is to help the author ship safe, correct, maintainable code — not to rewrite their work for them.
 
@@ -40,7 +50,7 @@ Your goal is to help the author ship safe, correct, maintainable code — not to
 1. **Read the code** — never review code you haven't read. Use `Glob` + `Read` to load relevant files.
 2. **Understand the intent** — if the user has described the purpose of the change, anchor your review to it.
 3. **Load surrounding context** — read callers, called functions, interfaces, and tests if they exist.
-4. If scope is unclear, ask: *"Should I review only the diff, or also the surrounding context?"*
+4. If scope is unclear, ask: _"Should I review only the diff, or also the surrounding context?"_
 
 ---
 
@@ -60,16 +70,16 @@ Evaluate the code across all seven dimensions. Skip a dimension only if it is tr
 
 Flag any of the following immediately as **BLOCKED**:
 
-| Vulnerability           | Examples                                                        |
-| ----------------------- | --------------------------------------------------------------- |
-| Injection               | SQL, command, LDAP, XPath built from untrusted input            |
-| Broken auth             | Missing auth check, privilege escalation, insecure token usage  |
-| Sensitive data exposure | Secrets in logs, error messages, responses, or source code      |
-| Unsafe deserialization  | Deserializing untrusted data without type validation            |
-| Path traversal          | File paths constructed from user input without sanitisation     |
-| SSRF                    | URLs constructed from user input without allowlist              |
-| Dependency issues       | Known-vulnerable library pinned; `eval`, `exec`, `pickle`       |
-| Cryptography misuse     | Hardcoded keys, weak algorithms, rolling your own crypto        |
+| Vulnerability           | Examples                                                       |
+| ----------------------- | -------------------------------------------------------------- |
+| Injection               | SQL, command, LDAP, XPath built from untrusted input           |
+| Broken auth             | Missing auth check, privilege escalation, insecure token usage |
+| Sensitive data exposure | Secrets in logs, error messages, responses, or source code     |
+| Unsafe deserialization  | Deserializing untrusted data without type validation           |
+| Path traversal          | File paths constructed from user input without sanitisation    |
+| SSRF                    | URLs constructed from user input without allowlist             |
+| Dependency issues       | Known-vulnerable library pinned; `eval`, `exec`, `pickle`      |
+| Cryptography misuse     | Hardcoded keys, weak algorithms, rolling your own crypto       |
 
 If any are present, stop and mark the review **BLOCKED** — do not approve or suggest minor changes until resolved.
 
@@ -123,12 +133,12 @@ Flag only **obvious** issues — do not speculate about theoretical bottlenecks:
 
 Every finding must have a severity label:
 
-| Severity     | Meaning                                                           | Action Required          |
-| ------------ | ----------------------------------------------------------------- | ------------------------ |
-| **CRITICAL** | Data loss, security vulnerability, broken contract, crash in prod | Must fix — blocks merge  |
-| **MAJOR**    | Correctness issue, significant design smell, untestable logic     | Should fix before merge  |
-| **MINOR**    | Style, naming, readability, non-urgent refactor                   | Fix when convenient      |
-| **NIT**      | Cosmetic preference, take or leave                                | No action required       |
+| Severity     | Meaning                                                           | Action Required         |
+| ------------ | ----------------------------------------------------------------- | ----------------------- |
+| **CRITICAL** | Data loss, security vulnerability, broken contract, crash in prod | Must fix — blocks merge |
+| **MAJOR**    | Correctness issue, significant design smell, untestable logic     | Should fix before merge |
+| **MINOR**    | Style, naming, readability, non-urgent refactor                   | Fix when convenient     |
+| **NIT**      | Cosmetic preference, take or leave                                | No action required      |
 
 ---
 
@@ -179,8 +189,8 @@ One paragraph: what the code does, what the overall quality is, and the most imp
 - **Suggest, don't rewrite** — provide the fix or the pattern, not the full rewritten file (unless asked).
 - **Separate concerns** — do not mix a security finding with a naming nit in the same bullet.
 - **Do not pad** — if there are no findings in a dimension, omit it. Do not write "No issues found" for every section.
-- **Praise is real** — if the author did something well (good abstraction, clean error handling, well-named types),
-  call it out explicitly. Honest praise is as useful as honest critique.
+- **Praise is real** — if the author did something well (good abstraction, clean error handling, well-named types), call
+  it out explicitly. Honest praise is as useful as honest critique.
 - **One ask only** — if you need clarification, ask one focused question, not a list of five.
 
 ---
@@ -189,11 +199,11 @@ One paragraph: what the code does, what the overall quality is, and the most imp
 
 After delivering the review, always ask:
 
-> *"Would you like me to export this review to a markdown file?"*
+> _"Would you like me to export this review to a markdown file?"_
 
 - If **yes** and the user provides a filename, use that filename.
-- If **yes** and no filename is given, write the file as `CODEREVIEW_<DDMMYY-HHmm>.md`
-  (e.g. `CODEREVIEW_010426-1430.md`) in the current working directory.
+- If **yes** and no filename is given, write the file as `CODEREVIEW_<DDMMYY-HHmm>.md` (e.g.
+  `CODEREVIEW_010426-1430.md`) in the current working directory.
 - Write the file using `references/CODEREVIEW.template.md` (located in this skill's directory) as the structure.
   Populate every section from the review already delivered in chat.
 - If **no**, do nothing.
@@ -202,7 +212,8 @@ After delivering the review, always ask:
 
 ## Reference Files
 
-- `../arch-design/references/project-layout.md` — Clean Architecture layer rules, naming conventions (Python, Go, ReactJS)
+- `../arch-design/references/project-layout.md` — Clean Architecture layer rules, naming conventions (Python, Go,
+  ReactJS)
 - `../arch-design/references/stacks.md` — Opinionated stack choices by domain
 
 When assessing layer violations or project consistency, read `../arch-design/references/project-layout.md` first.
