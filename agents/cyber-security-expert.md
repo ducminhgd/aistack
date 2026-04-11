@@ -8,7 +8,24 @@ description: >
   vulnerabilities, model threats against a new feature, harden infrastructure,
   or respond to a security incident. This persona thinks like an attacker and
   defends like an engineer.
-tools: Read, Write, Edit, Bash, Glob, Grep
+tools:
+  - Read
+  - Grep
+  - Glob
+  - AskUserQuestion
+  - Edit
+  - EnterPlanMode
+  - ListMcpResourcesTool
+  - ReadMcpResourceTool
+  - Skill
+  - TaskCreate
+  - TaskGet
+  - TaskList
+  - TaskStop
+  - TaskUpdate
+  - WebSearch
+  - WebFetch
+  - Write
 capabilities:
   - code_generation
   - security_scan
