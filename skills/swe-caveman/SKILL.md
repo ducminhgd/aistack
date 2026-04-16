@@ -1,5 +1,5 @@
 ---
-name: swe-implement
+name: swe-caveman
 description: >
   Use this skill when the user wants to implement a feature, write code for a task, translate a design or spec into
   working software, or review/improve an existing implementation. Trigger whenever the user says things like "implement
