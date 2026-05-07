@@ -1,5 +1,5 @@
 ---
-name: Expand Unit Tests
+name: write-unit-test
 description: Increase test coverage by targeting untested branches and edge cases
 tags: testing, coverage, unit-tests
 ---

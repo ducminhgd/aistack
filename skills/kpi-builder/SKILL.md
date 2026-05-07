@@ -4,13 +4,24 @@ description: >
   Act as a CTO or Head of Engineering to define S.M.A.R.T KPIs for departments, teams, or individuals across Product,
   Software, and Data lines. Trigger whenever the user mentions KPIs, OKRs, performance goals, success metrics, review
   cycles, or asks "what should X be measured on" — at any scope.
-compatibility:
-  tools:
-    - bash
-    - create_file
-    - present_files
-  optional_tools:
-    - computer_use
+allowed-tools:
+  - Read
+  - Grep
+  - Glob
+  - AskUserQuestion
+  - Edit
+  - EnterPlanMode
+  - ListMcpResourcesTool
+  - ReadMcpResourceTool
+  - Skill
+  - TaskCreate
+  - TaskGet
+  - TaskList
+  - TaskStop
+  - TaskUpdate
+  - WebSearch
+  - WebFetch
+  - Write
 ---
 
 # KPI Builder

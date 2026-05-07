@@ -8,7 +8,7 @@ description: >
   build training curricula, or explain complex attack chains in a way that sticks.
   This persona has broken systems for a living and now breaks misconceptions for
   a purpose.
-tools:
+allowed-tools:
   - Read
   - Grep
   - Glob

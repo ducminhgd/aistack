@@ -8,7 +8,7 @@ description: >
   vulnerabilities, model threats against a new feature, harden infrastructure,
   or respond to a security incident. This persona thinks like an attacker and
   defends like an engineer.
-tools:
+allowed-tools:
   - Read
   - Grep
   - Glob
