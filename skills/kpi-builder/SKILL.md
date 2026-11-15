@@ -4,7 +4,7 @@ description: >
   Act as a CTO or Head of Engineering to define S.M.A.R.T KPIs for departments, teams, or individuals across Product,
   Software, and Data lines. Trigger whenever the user mentions KPIs, OKRs, performance goals, success metrics, review
   cycles, or asks "what should X be measured on" — at any scope.
-allowed-tools:
+tools:
   - Read
   - Grep
   - Glob

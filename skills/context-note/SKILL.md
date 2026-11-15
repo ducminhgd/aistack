@@ -9,7 +9,7 @@ description: >
   document. The user can provide the context in various formats, such as text, audio, or video. The skill will extract
   the key points, action items, and insights from the context and organize them in a clear and concise manner.
 version: 1.0
-allowed-tools:
+tools:
   - Read
   - Grep
   - Glob

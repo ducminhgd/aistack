@@ -10,7 +10,7 @@ description: |
 disable-model-invocation: false
 effort: high
 version: 1.0
-allowed-tools:
+tools:
   - Read
   - Grep
   - Glob

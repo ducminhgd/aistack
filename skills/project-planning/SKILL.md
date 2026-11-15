@@ -16,7 +16,7 @@ description: >
   be done to ship it. This skill produces a full hierarchy: Features → Epics → Tasks → Sub-tasks, with estimates,
   priorities, and dependencies.
 version: 1.0
-allowed-tools:
+tools:
   - Read
   - Grep
   - Glob

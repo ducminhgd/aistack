@@ -17,7 +17,7 @@ metadata:
     - clean-code
     - tdd
     - refactoring
-allowed-tools:
+tools:
   - Read
   - Grep
   - Glob

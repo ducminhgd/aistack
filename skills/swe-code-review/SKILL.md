@@ -15,7 +15,7 @@ metadata:
     - quality
     - security
     - clean-code
-allowed-tools:
+tools:
   - Read
   - Grep
   - Glob
