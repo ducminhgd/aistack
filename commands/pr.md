@@ -1,6 +1,6 @@
 ---
 description: Clean up code, stage changes, and prepare a pull request
-allowed-tools: Bash(git add:*), Bash(git status:*), Bash(git diff:*), Bash(npm test:*), Bash(npm run lint:*)
+tools: Bash(git add:*), Bash(git status:*), Bash(git diff:*), Bash(npm test:*), Bash(npm run lint:*)
 ---
 
 # Pull Request/Merge request Preparation Checklist

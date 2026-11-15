@@ -9,7 +9,7 @@ description: >
   user shares a PRD or project plan and wants the technical design, or asks to review/critique an existing architecture.
   This skill covers system design, component breakdown, tech stack selection, coding conventions, and Mermaid/PlantUML
   diagrams.
-allowed-tools:
+tools:
   - Read
   - Grep
   - Glob

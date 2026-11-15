@@ -7,7 +7,7 @@ tags:
 description: >
   Use this skill when the user wants to summary or organize their notes, using second-brain format, Foam for markdown.
 version: 1.0
-allowed-tools:
+tools:
   - Read
   - Grep
   - Glob

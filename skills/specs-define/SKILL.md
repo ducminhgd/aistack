@@ -13,7 +13,7 @@ metadata:
     - requirements
     - software-engineering
     - documentation
-allowed-tools:
+tools:
   - Read
   - Grep
   - Glob
