@@ -1,3 +1,6 @@
+---
+version: 1.0
+---
 # Python Best Practices
 
 ## Code Style

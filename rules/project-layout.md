@@ -1,3 +1,6 @@
+---
+version: 1.0
+---
 # Project Layout Rules — Clean Architecture
 
 ## Core Principles

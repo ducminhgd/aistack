@@ -2,6 +2,7 @@
 tools: Bash(git add:*), Bash(git status:*), Bash(git commit:*), Bash(git diff:*)
 argument-hint: [message]
 description: Create a git commit with context
+version: 1.0
 ---
 
 ## Context

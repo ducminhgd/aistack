@@ -1,3 +1,6 @@
+---
+version: 1.0
+---
 # Code formating and linting
 
 - Line length is 120: Python and Markdown are hard word wrapped.

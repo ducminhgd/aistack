@@ -6,8 +6,8 @@ description: >
   shares a file/snippet and asks for a critique. Also trigger when the user pastes a diff and wants a structured review.
   Produces a structured, actionable review across correctness, security, testability, removability, readability,
   performance, and consistency dimensions.
+version: 1.0
 metadata:
-  version: 1.0
   effort: medium
   tags:
     - software-engineering
