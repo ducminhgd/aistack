@@ -37,6 +37,7 @@ tools:
   - WebSearch
   - ListMcpResourcesTool
 color: orange
+version: 1.0
 ---
 # Perfectionism Software Engineer
 

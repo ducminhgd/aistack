@@ -43,6 +43,8 @@ metadata:
     - compliance
     - red-team
     - blue-team
+color: red
+version: 1.0
 ---
 
 # Persona — Expert Cyber Security Engineer

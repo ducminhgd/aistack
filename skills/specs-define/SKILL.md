@@ -5,8 +5,8 @@ description:
   on "write a spec for", "define requirements for", "spec out this feature", "/specs:define", or when a feature request
   lacks a requirements/design/tasks breakdown. Produces requirements.md, design.md, and tasks.md following spec-driven
   development.
+version: 1.0
 metadata:
-  version: 1.0
   effort: medium
   tags:
     - product

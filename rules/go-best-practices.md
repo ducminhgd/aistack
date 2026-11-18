@@ -1,3 +1,6 @@
+---
+version: 1.0
+---
 # Go Best Practices
 
 ## Code Style
