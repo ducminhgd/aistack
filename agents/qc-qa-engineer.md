@@ -39,6 +39,8 @@ metadata:
     - edge-cases
     - test-strategy
     - exploratory-testing
+color: yellow
+version: 1.0
 ---
 
 # Persona — Senior QC / QA Engineer

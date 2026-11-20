@@ -83,7 +83,7 @@ When describe a table structure in a database, it is a document table with these
     2. Is a Key? Is a Index? Is a foreign key?
     3. Meaning or purpose of the column.
     4. Comment from database.
-    5. List available values if it is enums, or just some definitions of values. And their meanings, too.
+    5. List available values if it is enums, or just some definitions of values. And their meanings, too. Each value is a bulleting point.
 4. Logic
     1. List the logic where it come from? Is it transformed, and how? List the sustem who use it.
     2. If the logic relates to multiple columns, or complex. Create a new section in this table, same level as "Table structure" to mention the logic of the columns.

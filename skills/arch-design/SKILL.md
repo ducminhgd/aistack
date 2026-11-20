@@ -27,6 +27,7 @@ tools:
   - WebSearch
   - WebFetch
   - Write
+version: 1.0
 ---
 
 # Architecture Design Skill

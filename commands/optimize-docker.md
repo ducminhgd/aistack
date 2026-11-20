@@ -2,6 +2,7 @@
 name: optimize-docker
 description: Optimize any files that may help the Docker Image become better.
 tags: docker, optimization
+version: 1.0
 ---
 # Optimize Docker
 

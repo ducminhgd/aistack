@@ -36,3 +36,7 @@ format second-brain or using Foam for Visual Studio Code.
 - **Daily notes** - Capture timestamped thoughts
 - **Templates** - Standardize note creation
 - **Tags** - Organize and filter content
+
+## Output
+
+If the user asks for output, you can create an HTML file to create a 3-dimensions graph to link those topics or tags.

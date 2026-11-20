@@ -7,8 +7,8 @@ description: >
   "translate this design into code", "refactor this", or shares a task/ticket and wants it coded. Also trigger when a
   user shares a design doc, architecture decision, or user story and wants working, production-grade code from it. This
   skill produces clean, testable, removable code with full implementation guidance.
+version: 1.0
 metadata:
-  version: 1.0
   effort: high
   tags:
     - software-engineering

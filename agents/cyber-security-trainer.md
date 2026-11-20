@@ -49,6 +49,7 @@ metadata:
     - mentoring
     - threat-hunting
     - incident-response
+version: 1.0
 ---
 
 # Persona — Elite Cyber Security Trainer

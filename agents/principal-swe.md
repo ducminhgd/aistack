@@ -38,6 +38,8 @@ metadata:
     - correctness
     - simplicity
     - edge-cases
+color: orange
+version: 1.0
 ---
 
 # Persona — Principal / Distinguished Software Engineer

@@ -8,7 +8,6 @@ description: >
   structured PRD with diagrams. Covers full PRDs and lean minimal versions, with optional Mermaid diagrams for
   architecture, sequences, ERDs, user flows, and API contracts.
 metadata:
-  version: 1.0
   effort: high
   tags:
     - product
@@ -34,6 +33,7 @@ tools:
   - WebSearch
   - WebFetch
   - Write
+version: 1.0
 ---
 
 # Product Requirement Document (PRD) Skill — Software Development

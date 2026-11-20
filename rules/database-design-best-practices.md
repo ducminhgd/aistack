@@ -1,3 +1,6 @@
+---
+version: 1.0
+---
 # Database Design Best Practices — RDBMS (PostgreSQL & MySQL/MariaDB)
 
 ## Schema Design
