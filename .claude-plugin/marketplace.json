@@ -1,0 +1,22 @@
+{
+    "name": "mgd-marketplace",
+    "owner": {
+        "name": "Giã Dương Đức Minh",
+        "email": "giaduongducminh@gmail.com",
+        "url": "https://github.com/ducminhgd"
+    },
+    "plugins": [
+        {
+            "name": "mgd-swe",
+            "source": "./plugins/swe"
+        },
+        {
+            "name": "mgd",
+            "source": "./plugins/mgd"
+        },
+        {
+            "name": "mgd-product",
+            "source": "./plugins/product"
+        }
+    ]
+}
