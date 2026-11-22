@@ -1,34 +1,28 @@
 .DEFAULT_GOAL := help
 
-# Everything after 'install' (agent name + flags) is forwarded to the script.
-# Use '--' to stop make from interpreting -g/-d/-f as its own flags.
-_ARGS := $(filter-out install help,$(MAKECMDGOALS))
+.PHONY: help validate add-marketplace add-marketplace-local install-plugins update-plugins
 
-.PHONY: help install $(_ARGS)
+validate:
+	claude plugin validate ./.
 
-help:
-	@echo "Usage:"
-	@echo "  make install -- <agent> [-g|--global] [-d|--dir <dirs>] [-f|--force]"
-	@echo ""
-	@echo "Arguments:"
-	@echo "  agent              AI client: claude, codex, gemini, cursor, augment"
-	@echo "  -g, --global       Install to user home directory (~/.claude)"
-	@echo "  -d, --dir <dirs>   Install into .claude inside given directory(ies)."
-	@echo "                     Multiple dirs: comma-separated  (-d /path1,/path2)"
-	@echo "  -f, --force        Overwrite existing directories without error"
-	@echo ""
-	@echo "  '--' stops make from treating -g/-d/-f as its own flags."
-	@echo ""
-	@echo "Examples:"
-	@echo "  make install -- claude -g"
-	@echo "  make install -- claude --global --dir /path/to/project"
-	@echo "  make install -- claude -g -d /path1,/path2 -f"
+add-marketplace:
+	claude plugin add-market --scope user https://github.com/ducminhgd/aistack
+
+add-marketplace-local:
+	claude plugin add-market-local --scope user ./.
 
 install:
-	@bash scripts/install.sh $(_ARGS)
+	claude plugin install mgd-swe@mgd-marketplace
+	claude plugin install mgd@mgd-marketplace
+	claude plugin install mgd-product@mgd-marketplace
 
-# Absorb extra goals (agent name and flags) so make does not produce spurious output
-ifneq ($(_ARGS),)
-$(_ARGS):
-	@:
-endif
+update:
+	claude plugin update mgd-swe@mgd-marketplace
+	claude plugin update mgd@mgd-marketplace
+	claude plugin update mgd-product@mgd-marketplace
+
+remove:
+	claude plugin remove mgd-swe@mgd-marketplace
+	claude plugin remove mgd@mgd-marketplace
+	claude plugin remove mgd-product@mgd-marketplace
+
