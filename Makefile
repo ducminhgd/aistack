@@ -3,7 +3,10 @@
 .PHONY: help validate add-marketplace add-marketplace-local install-plugins update-plugins
 
 validate:
-	claude plugin validate ./.
+	claude plugin validate .claude-plugin/marketplace.json
+	claude plugin validate plugins/mgd
+	claude plugin validate plugins/product
+	claude plugin validate plugins/swe
 
 add-marketplace:
 	claude plugin add-market --scope user https://github.com/ducminhgd/aistack

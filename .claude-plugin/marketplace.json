@@ -5,6 +5,7 @@
         "email": "giaduongducminh@gmail.com",
         "url": "https://github.com/ducminhgd"
     },
+    "description": "MGD marketplace for AI tools",
     "plugins": [
         {
             "name": "mgd-swe",
