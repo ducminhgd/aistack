@@ -81,18 +81,21 @@ sub-sections:
   in the `Version` column.
 - **Taxonomies & Terminologies**: a Level 2 heading, it is used to describe the taxonomies and terminologies that are
   used in the document, and their meanings.
+- **Entity-Relationship Diagram**: a Level 2 heading, it is used to describe the ERD of the database, if any. It is a
+  diagram format, and it should be attached in the document.
 - **Migration history**: a Level 2 heading, it is used to describe the migration history of the databases, if any. It is
   a table format with these columns: `Migration ID`, `Date`, `Author`, `Description`. Tags are in the `Migration ID`
   column.
 
 #### Database
 
-If the document is _Style 1_, each database is a Level 1 heading, and the format is `Database database_name`. Write the
-description of the database, and its purpose. Then, each table is a Level 2 heading, and the format is
-`Table table_name`. Write the description of the table, and its purpose.
+If the document is _Style 1_, each database is a Level 1 heading, and the format is "Database `database_name`". Write
+the description of the database, and its purpose, and the entity-relationship diagram. Then, each table or each view is
+a Level 2 heading, and the format is "Table `table_name`" or "View `view_name`". Write the description of the table, and
+its purpose.
 
-If the document is _Style 2_, each table is a Level 1 heading, and the format is `Table table_name`. Write the
-description of the table, and its purpose.
+If the document is _Style 2_, each table is a Level 1 heading, and the format is "Table `table_name`" or "View
+`view_name`". Write the description of the table, and its purpose.
 
 ### Table or view
 
@@ -113,7 +116,19 @@ Contains a table format with these columns: `Column`, `Data Type`, `Descriptions
 - The `Column` column is the name of the column in the database.
 - The `Data Type` column is the data type of the column.
 - The `Descriptions` column is used to describe the column, its purpose, and its meaning.
-- The `Business logic` column is used to describe the business logic of the column, if any.
+  - If the column is a primary key, add "Primary key" on the first line of its description.
+  - If the column is deprecated, add "DEPRECATED" on the first line of its description.
+  - If the column is "not null", add "NOT NULL" on the first line of its description.
+  - If the column is a foreign key, add the reference table and column in the description.
+  - If the column is an enum, add the list of enum values in the description. Each enum value should be in a new line,
+    and the format is "`enum_value`: description".
+  - If the column is a JSON, add the list of keys in the JSON in the description. Each key should be in a new line, and
+    the format is "`key`: description".
+  - If the column is a list, add the list of values in the description. Each value should be in a new line, and the
+    format is "`value`: description".
+- The `Data logic` column is used to describe the data logic of the column, if any. If the logic relates to multiple
+  columns, or complex, create a new section in this table, same level as "Table structure" to mention the logic of the
+  columns.
 - If the column is a primary key, it should be bold and underlined.
 - If the column is a unique key, it should be underlined.
 - If the column is a foreign key, it should be italic.
